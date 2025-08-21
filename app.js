@@ -40,7 +40,7 @@ function updateMessage(){
             messageEl.innerText = `American Pharoah wins with a final distance of ${counterTwo} yds. over Secretariat's ${counterOne} yds.! Congratulations American Pharoah!!!`;
             winner = true;
         } else if (counterOne === counterTwo) {
-            messageEl.innerText = `It's a tie. The game is over with neither horse winner.`;
+            messageEl.innerText = `It's a tie. The game is over with neither horse being the winner.`;
             tie = true;
         }
     }
