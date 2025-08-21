@@ -20,7 +20,7 @@ function init() {
     tie = false;
     trackOneEl.innerText = `.`;
     trackTwoEl.innerText = `.`;
-    messageEl.innerText = `The race will shortly begin again anew. The horses are behind the blocks, awaiting the starting bugle call.`
+    messageEl.innerText = `The race will shortly begin again anew. The horses are behind the starting gate, awaiting the bugle call.`
 };
 
 function updateMessage(){
