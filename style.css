@@ -21,6 +21,13 @@ img {
     height: 40%;
 }
 
+@media screen and (max-width: 480px) {
+      img {
+        width: auto !important;
+        height: auto !important;
+      }
+    }
+
 #message {
     color:rgb(11, 251, 255);
     display: flex;
