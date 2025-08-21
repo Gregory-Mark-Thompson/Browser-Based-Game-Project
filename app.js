@@ -62,12 +62,12 @@ function rolling() {
         updateMessage();
     } else if (winner) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `The race is over with Player One being the winner. Press the reset to race again.`;
+            messageEl.innerText = `The race is over with Runner One being the winner. Press the reset to race again.`;
         } else {
-            messageEl.innerText = `The race is over with Player Two being the winner. Press the reset to race again.`
+            messageEl.innerText = `The race is over with Runner Two being the winner. Press the reset to race again.`
         };
     } else {
-        messageEl.innerText = `The race is over and ended in a tie. Press the reset to race again.`
+        messageEl.innerText = `The race is over and ended in a tie with neither runner winning. Press the reset to race again.`
     };
 };
 
