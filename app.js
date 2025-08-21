@@ -70,12 +70,12 @@ function rolling() {
         updateMessage();
     } else if (winner) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `The race is over with Secretariat being the winner. Press the reset to have the horses race again.`;
+            messageEl.innerText = `The race is over with Secretariat being the winner. Press "Race Once More" to have the horses race again.`;
         } else {
-            messageEl.innerText = `The race is over with American Pharoah being the winner. Press the reset to have the horses race again.`
+            messageEl.innerText = `The race is over with American Pharoah being the winner. Press "Race Once More" to have the horses race again.`
         };
     } else {
-        messageEl.innerText = `The race is over and ended in a tie with neither horse winning. Press the reset to have the horses race again.`
+        messageEl.innerText = `The race is over and ended in a tie with neither horse winning. Press "Race Once More" to have the horses race again.`
     };
 };
 

@@ -1,9 +1,17 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color:rgb(255, 0, 0);
+}
+
 #trackOne {
-    color: royalblue;
+    color: rgb(255, 252, 46);
     margin: 10px;
 }
 #trackTwo {
-    color: magenta;
+    color: rgb(255, 10, 255);
     margin: 10px;
 }
 
@@ -14,6 +22,25 @@ img {
 }
 
 #message {
+    color:rgb(11, 251, 255);
     display: flex;
     flex-wrap: wrap;
+}
+
+button {
+    border-color: greenyellow;
+}
+
+#roll {
+    color: orange;
+    background-color: blue;
+    font-weight: 700;
+    padding: 5px;
+}
+
+#reset {
+    color: rgb(252, 52, 132);
+    background-color: burlywood;
+    font-weight: 700;
+    padding: 5px;
 }
