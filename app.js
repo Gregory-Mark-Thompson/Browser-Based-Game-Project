@@ -20,27 +20,27 @@ function init() {
     tie = false;
     trackOneEl.innerText = `.`;
     trackTwoEl.innerText = `.`;
-    messageEl.innerText = `The race will shortly begin again anew. The runners are crouched at their blocks, awaiting the starting gun.`
+    messageEl.innerText = `The race will shortly begin again anew. The horses are behind the blocks, awaiting the starting bugle call.`
 };
 
 function updateMessage(){
     if (counterOne < 20 && counterTwo < 20) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `It's second number ${turn}. Runner One leads at ${counterOne} yds. Runner Two trails at ${counterTwo} yds.`;
+            messageEl.innerText = `It's second number ${turn}. Secretariat leads at ${counterOne} yds. American Pharoah trails at ${counterTwo} yds.`;
         } else if (counterTwo > counterOne) {
-            messageEl.innerText = `It's second number ${turn}. Runner Two leads at ${counterTwo} yds. Runner One trails at ${counterOne} yds.`;
+            messageEl.innerText = `It's second number ${turn}. American Pharoah leads at ${counterTwo} yds. Secretariat trails at ${counterOne} yds.`;
         } else {
-            messageEl.innerText = `It's second number ${turn}. The runners are all tied up at ${counterTwo} yds.`;
+            messageEl.innerText = `It's second number ${turn}. The horses are in a dead heat at ${counterTwo} yds.`;
         }
     } else if (counterOne >= 20 || counterTwo >= 20) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `Runner One wins with a final distance of ${counterOne} yds. over Runner Two's ${counterTwo} yds.! Congratulations Runner One!!!`;
+            messageEl.innerText = `Secretariat wins with a final distance of ${counterOne} yds. over American Pharoah's ${counterTwo} yds.! Congratulations Secretariat!!!`;
             winner = true;
         } else if (counterTwo > counterOne) {
-            messageEl.innerText = `Runner Two wins with a final distance of ${counterTwo} yds. over Runner One's ${counterOne} yds.! Congratulations Runner Two!!!`;
+            messageEl.innerText = `American Pharoah wins with a final distance of ${counterTwo} yds. over Secretariat's ${counterOne} yds.! Congratulations American Pharoah!!!`;
             winner = true;
         } else if (counterOne === counterTwo) {
-            messageEl.innerText = `It's a tie. The game is over with no winner.`;
+            messageEl.innerText = `It's a tie. The game is over with neither horse winner.`;
             tie = true;
         }
     }
@@ -62,12 +62,12 @@ function rolling() {
         updateMessage();
     } else if (winner) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `The race is over with Runner One being the winner. Press the reset to race again.`;
+            messageEl.innerText = `The race is over with Secretariat being the winner. Press the reset to have the horses race again.`;
         } else {
-            messageEl.innerText = `The race is over with Runner Two being the winner. Press the reset to race again.`
+            messageEl.innerText = `The race is over with American Pharoah being the winner. Press the reset to have the horses race again.`
         };
     } else {
-        messageEl.innerText = `The race is over and ended in a tie with neither runner winning. Press the reset to race again.`
+        messageEl.innerText = `The race is over and ended in a tie with neither horse winning. Press the reset to have the horses race again.`
     };
 };
 
