@@ -29,10 +29,13 @@ function updateMessage(){
     if (counterOne < 20 && counterTwo < 20) {
         if (counterOne > counterTwo) {
             messageEl.innerText = `It's second number ${turn}. Secretariat leads at ${counterOne} yds. American Pharoah trails at ${counterTwo} yds.`;
+            pictureEl.src = "https://plus.unsplash.com/premium_photo-1661964201700-be5a77a1e7e4?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
         } else if (counterTwo > counterOne) {
             messageEl.innerText = `It's second number ${turn}. American Pharoah leads at ${counterTwo} yds. Secretariat trails at ${counterOne} yds.`;
+            pictureEl.src = "https://plus.unsplash.com/premium_photo-1661964201700-be5a77a1e7e4?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
         } else {
             messageEl.innerText = `It's second number ${turn}. The horses are in a dead heat at ${counterTwo} yds.`;
+            pictureEl.src = "https://plus.unsplash.com/premium_photo-1661964201700-be5a77a1e7e4?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
         }
     } else if (counterOne >= 20 || counterTwo >= 20) {
         if (counterOne > counterTwo) {
@@ -44,7 +47,8 @@ function updateMessage(){
             pictureEl.src = "https://images.unsplash.com/photo-1619616754069-b87e390edfcd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
             winner = true;
         } else if (counterOne === counterTwo) {
-            messageEl.innerText = `It's a tie. The game is over with neither horse being the winner.`;
+            messageEl.innerText = `It's a tie. The race is over with neither horse being the winner.`;
+            pictureEl.src = "https://images.unsplash.com/photo-1516126869905-430937ca43e6?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
             tie = true;
         }
     }
