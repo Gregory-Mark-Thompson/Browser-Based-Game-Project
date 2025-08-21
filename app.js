@@ -11,6 +11,7 @@ const rollBtnEl = document.querySelector('#roll');
 const messageEl = document.getElementById('message');
 const trackOneEl = document.querySelector('#trackOne');
 const trackTwoEl = document.querySelector('#trackTwo');
+const pictureEl = document.querySelector('#derbyPicture');
 
 function init() {
     turn = 0;
@@ -20,6 +21,7 @@ function init() {
     tie = false;
     trackOneEl.innerText = `.`;
     trackTwoEl.innerText = `.`;
+    pictureEl.src = "https://images.unsplash.com/photo-1565657739331-ca2241b47e95?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
     messageEl.innerText = `The race will shortly begin again anew. The horses are behind the starting gate, awaiting the bugle call.`
 };
 
@@ -36,8 +38,10 @@ function updateMessage(){
         if (counterOne > counterTwo) {
             messageEl.innerText = `Secretariat wins with a final distance of ${counterOne} yds. over American Pharoah's ${counterTwo} yds.! Congratulations Secretariat!!!`;
             winner = true;
+            pictureEl.src = "https://images.unsplash.com/photo-1619616754069-b87e390edfcd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
         } else if (counterTwo > counterOne) {
             messageEl.innerText = `American Pharoah wins with a final distance of ${counterTwo} yds. over Secretariat's ${counterOne} yds.! Congratulations American Pharoah!!!`;
+            pictureEl.src = "https://images.unsplash.com/photo-1619616754069-b87e390edfcd?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
             winner = true;
         } else if (counterOne === counterTwo) {
             messageEl.innerText = `It's a tie. The game is over with neither horse being the winner.`;
