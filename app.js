@@ -26,18 +26,18 @@ function init() {
 function updateMessage(){
     if (counterOne < 20 && counterTwo < 20) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `It's turn ${turn}. Player One leads with ${counterOne} pts. Player Two trails with ${counterTwo} pts.`;
+            messageEl.innerText = `It's turn ${turn}. Player One leads with ${counterOne} yds. Player Two trails with ${counterTwo} yds.`;
         } else if (counterTwo > counterOne) {
-            messageEl.innerText = `It's turn ${turn}. Player Two leads with ${counterTwo} pts. Player One trails with ${counterOne} pts.`;
+            messageEl.innerText = `It's turn ${turn}. Player Two leads with ${counterTwo} yds. Player One trails with ${counterOne} yds.`;
         } else {
-            messageEl.innerText = `It's turn ${turn}. The players are all tied up at ${counterTwo}.`;
+            messageEl.innerText = `It's turn ${turn}. The players are all tied up at ${counterTwo} yds.`;
         }
     } else if (counterOne >= 20 || counterTwo >= 20) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `Player One wins with a score of ${counterOne} over Player Two's ${counterTwo}! Congratulations Player One!!!`;
+            messageEl.innerText = `Player One wins with a distance of ${counterOne} yds. over Player Two's ${counterTwo} yds.! Congratulations Player One!!!`;
             winner = true;
         } else if (counterTwo > counterOne) {
-            messageEl.innerText = `Player Two wins with a score of ${counterTwo} over Player One's ${counterOne}! Congratulations Player Two!!!`;
+            messageEl.innerText = `Player Two wins with a distance of ${counterTwo} yds. over Player One's ${counterOne} yds.! Congratulations Player Two!!!`;
             winner = true;
         } else if (counterOne === counterTwo) {
             messageEl.innerText = `It's a tie. The game is over with no winner.`;
