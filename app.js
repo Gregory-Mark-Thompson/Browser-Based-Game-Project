@@ -26,9 +26,9 @@ function init() {
 function updateMessage(){
     if (counterOne < 20 && counterTwo < 20) {
         if (counterOne > counterTwo) {
-            messageEl.innerText = `It's turn ${turn}. Runner One leads with ${counterOne} yds. Runner Two trails with ${counterTwo} yds.`;
+            messageEl.innerText = `It's turn ${turn}. Runner One leads at ${counterOne} yds. Runner Two trails at ${counterTwo} yds.`;
         } else if (counterTwo > counterOne) {
-            messageEl.innerText = `It's turn ${turn}. Runner Two leads with ${counterTwo} yds. Runner One trails with ${counterOne} yds.`;
+            messageEl.innerText = `It's turn ${turn}. Runner Two leads at ${counterTwo} yds. Runner One trails at ${counterOne} yds.`;
         } else {
             messageEl.innerText = `It's turn ${turn}. The runners are all tied up at ${counterTwo} yds.`;
         }
