@@ -15,15 +15,17 @@ h1 {
     margin: 10px;
 }
 
-img {
-    display: flex;
-    width: 40%;
-    height: 40%;
+@media screen and (min-width: 481px) {
+    img {
+        display: flex;
+        width: 40%;
+        height: 40%;
+    }
 }
 
 @media screen and (max-width: 480px) {
       img {
-        width: auto !important;
+        width: 100% !important;
         height: auto !important;
       }
     }
