@@ -20,7 +20,7 @@ function init() {
     tie = false;
     trackOneEl.innerText = `.`;
     trackTwoEl.innerText = `.`;
-    messageEl.innerText = `The game has begun anew. The runners are crouched at their blocks.`
+    messageEl.innerText = `The race has begun anew. The runners are crouched at their blocks.`
 };
 
 function updateMessage(){
@@ -60,15 +60,15 @@ function rolling() {
         trackTwoEl.innerText = "_.".repeat(counterTwo);
         turn += 1;
         updateMessage();
-    } else if (winner || tie) {
+    } else if (winner) {
         if (counterOne > counterTwo) {
             messageEl.innerText = `The race is over with Player One being the winner. Press the reset to race again.`;
-        } else if (counterOne > counterTwo) {
-            messageEl.innerText = `The race is over with Player Two being the winner. Press the reset to race again.`
         } else {
-            messageEl.innerText = `The race is over and ended in a tie. Press the reset to race again.`
-        }
-    }
+            messageEl.innerText = `The race is over with Player Two being the winner. Press the reset to race again.`
+        };
+    } else {
+        messageEl.innerText = `The race is over and ended in a tie. Press the reset to race again.`
+    };
 };
 
 resetBtnEl.addEventListener('click', init);
